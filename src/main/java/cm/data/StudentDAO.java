@@ -18,11 +18,7 @@ public class StudentDAO {
     public static void listStudent() {
 
         PreparedStatement ps;
-        // PreparedStatement --> nos ayuda a prepara la sentencia SQL
-        // que vamos a ejecutar hacia la base de datos
         ResultSet rs;
-        // ResultSet --> es un objeto que nos permite almacenar el resultado
-        // obtenido de la base de datos
         Connection con = getConexion();
         String sql = "SELECT * FROM estudiante ORDER BY id_estudiante";
 
