@@ -23,7 +23,7 @@ public class Conexion {
     }
 
 //    public static void main(String[] args) {
-//        Connection conexion = Conexion.getConexion();
+//        Connection conexion = Conexion.getConexion();   //--> Comprobación de que la conexión es efectiva
 //        if(conexion != null){
 //            System.out.println("Connection has been made" + conexion);
 //        }else{

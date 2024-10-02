@@ -2,18 +2,27 @@ package cm.student;
 
 public class Student {
 
-    private int idStudent = 1;
+    private int idStudent;
     private String name;
     private String surname;
     private int phoneNumber;
     private String email;
 
-    public Student() {
-        this.idStudent ++;
+    public Student(){}
+
+    public Student(int idStudent) {
+        this.idStudent = idStudent;
     }
 
     public Student(String name, String surname, int phoneNumber, String email) {
-        this();
+        this.name = name;
+        this.surname = surname;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
+    public Student(int idStudent, String name, String surname, int phoneNumber, String email) {
+        this.idStudent = idStudent;
         this.name = name;
         this.surname = surname;
         this.phoneNumber = phoneNumber;
@@ -64,7 +73,7 @@ public class Student {
     public String toString() {
         return "Student{" +
                 "idStudent=" + idStudent +
-                ", name='" + name + '\'' +
+                " name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", phoneNumber=" + phoneNumber +
                 ", email='" + email + '\'' +
