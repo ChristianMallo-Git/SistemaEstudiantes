@@ -13,16 +13,10 @@ import static cm.connection.Conexion.getConexion;
 
 public class StudentDAO {
 
-    //public static List<Student> listStudent = new ArrayList<>(); --> ESTO LO AÑADÍ YO, PREGUNTAR SARA
-
-    public static List<Student> listStudent() { //--> LO TENÍA COMO VOID, PREGUNTAR SARA
+    public static List<Student> listStudent() {
         List<Student> listStudent = new ArrayList<>();
         PreparedStatement ps;
-        // PreparedStatement --> nos ayuda a preparar la sentencia SQL
-        // que vamos a ejecutar hacia la base de datos
         ResultSet rs;
-        // ResultSet --> es un objeto que nos permite almacenar el resultado
-        // obtenido de la base de datos
         Connection con = getConexion();
         String sql = "SELECT * FROM estudiante ORDER BY id_estudiante";
 
@@ -43,7 +37,6 @@ public class StudentDAO {
         } finally {
             try {
                 con.close();
-                //listStudent.forEach(System.out::println); //--> ESTO SE LO AÑADÍ YO, PREGUNTAR SARA
             } catch (SQLException e) {
                 System.out.println("An error ocurred when closing the connection " + e.getMessage());
             }
