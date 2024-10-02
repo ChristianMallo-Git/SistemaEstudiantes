@@ -20,4 +20,12 @@ public class Conexion {
         }
         return conexion;
     }
+    //    public static void main(String[] args) {
+//        Connection conexion = Conexion.getConexion();   //--> Comprobación de que la conexión es efectiva
+//        if(conexion != null){
+//            System.out.println("Connection has been made" + conexion);
+//        }else{
+//            System.out.println("An error ocurred while connecting");
+//        }
+//    }
 }
